@@ -1,5 +1,110 @@
-template-repository (1.0-1) unstable; urgency=medium
+psrip (1.3-10) unstable; urgency=medium
 
-  * Initial release
+  * QA upload.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + psrip: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 01 Feb 2021 22:49:05 +0000
+
+psrip (1.3-9) unstable; urgency=medium
+
+  * QA upload.
+  * Using new DH level format. Consequently:
+      - debian/compat: removed.
+      - debian/control: changed from 'debhelper' to 'debhelper-compat' in
+        Build-Depends field and bumped level to 12.
+  * debian/control:
+      - Added 'Rules-Requires-Root: no' to source stanza.
+      - Bumped Standards-Version to 4.5.0.
+      - Created VCS fields.
+  * debian/copyright: updated packaging copyright years.
+  * debian/salsa-ci.yml: added to provide CI tests for Salsa.
+  * debian/tests/*: created to perform trivial CI tests.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 29 Mar 2020 23:15:36 -0300
+
+psrip (1.3-8) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream homepage.
+  * Set Debian QA Group as maintainer. (see #721060)
+  * Migrations:
+      - debian/copyright to 1.0 format.
+      - debian/rules to simplified format.
+      - DH level to 10.
+      - DebSrc to 3.0 format.
+  * debian/control:
+      - Added a comma between dependencies.
+      - Added Homepage field.
+      - Bumped Standards-Version to 4.1.1.
+  * debian/dirs: removed in favor of debian/install and debian/manpages.
+  * debian/install: created to install the final binaries.
+  * debian/manpages: added to install the manpage.
+  * debian/patches/10_manpage.patch: added to fix the manpage.
+  * debian/source.lintian-overrides: removed. This package is not native.
+  * debian/watch: added a fake site to explain about the current status
+    of the original upstream homepage.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Fri, 29 Sep 2017 20:44:06 -0300
+
+psrip (1.3-7) unstable; urgency=low
+
+  * debian/control (Build-Depends): Require version 5 of debhelper to
+    match debian/compat.
+
+  * debian/copyright: Provide proper copyright information.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Sun, 24 Feb 2008 19:12:08 -0500
+
+psrip (1.3-6) unstable; urgency=low
+
+  * debian/rules (binary-arch): Do nothing here.
+    (binary-indep): Do everything here that was in binary-arch.  Fixes
+    lintian warning binary-arch-rules-but-pkg-is-arch-indep.
+
+  * debian/control (Standards-Version): Update to 3.7.3.  No changes needed.
+
+  * debian/source.lintian-overrides: Override native-package-with-dash-version.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Mon, 14 Jan 2008 16:25:10 -0500
+
+psrip (1.3-5) unstable; urgency=low
+
+  * debian/rules (DH_COMPAT): Remove declaration.
+  * debian/compat: New file (level 5).
+  * debian/control (Depends): Add ${misc:Depends}.
+
+  * debian/control (Standards-Version): Update to 3.7.2
+
+  * debian/control (Build-Depends-Indep): Remove debhelper.
+  (Build-Depends): Add debhelper.
+
+  * debian/copyright: Remove "(s)" from upstream developer's name.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Tue,  3 Oct 2006 00:28:22 -0700
+
+psrip (1.3-4) unstable; urgency=low
+
+  * debian/watch: New file.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Fri, 30 Sep 2005 21:41:03 -0700
+
+psrip (1.3-3) unstable; urgency=low
+
+  * New maintainer.  Thanks for all your work, Jens.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Fri,  2 Sep 2005 15:47:18 -0700
+
+psrip (1.3-2) unstable; urgency=low
+
+  * Improved description (closes: Bug#152460).
+
+ -- Jens Schmalzing <jensen@debian.org>  Wed, 10 Jul 2002 10:26:06 +0200
+
+psrip (1.3-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Jens Schmalzing <jensen@debian.org>  Mon,  1 Jul 2002 19:03:22 +0200
