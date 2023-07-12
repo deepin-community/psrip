@@ -1,0 +1,6 @@
+Test-Command: psrip
+Restrictions: allow-stderr
+
+Test-Command: cp debian/tests/lua.ps $AUTOPKGTEST_TMP;
+              cd $AUTOPKGTEST_TMP;
+              psrip lua.ps

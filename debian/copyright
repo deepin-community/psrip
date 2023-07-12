@@ -1,9 +1,17 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: psrip
+Source: http://www.clackas.de/html/perl.html
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
+Copyright: ? Christian Lackas <delta@clackas.de>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2002      Jens Schmalzing <jensen@debian.org>
+           2005-2008 Thomas Bushnell, BSG <tb@debian.org>
+           2017-2020 Joao Eriberto Mota Filho <eriberto@debian.org>
+License: GPL-2+
+
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
